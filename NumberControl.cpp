@@ -11,7 +11,7 @@ std::string szam_to_string(int szam){
 
 //-------------------------------------------------------------------
 NumberControl::NumberControl(int x0, int y0, int min0, int max0, int szam0): Widget(x0, y0),
-                            min(min0), max(max0), szam(szam0) {
+                            min(min0), max(max0), szam(szam0){
     t1 = new EditText(x,y,szam_to_string(szam));
     b1 = new Button(x+21, y, "plusz");
     b2 = new Button(x+21, y+12, "minusz");

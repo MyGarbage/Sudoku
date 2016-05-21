@@ -32,8 +32,9 @@ void Text::draw(){
              <<box(gout.twidth(label)+2, sy-4);
         gout <<color(255,255,255);
     }
-    if (label != "0")
+    if (label != "0"){
         gout <<move_to(x,y+gout.cascent()+3)  <<text(' '+label);
+    }
 }
 
 void Text::fajlbair(std::ostream &file){

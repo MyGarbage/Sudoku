@@ -1,5 +1,7 @@
+// GitHub username: MyGarbage
+//
+
 #include "Application.h"
-#include <iostream>
 
 int main()
 {

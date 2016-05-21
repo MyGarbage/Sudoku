@@ -5,10 +5,8 @@
 
 class Application
 {
-    private:
-        std::vector<std::vector<int>> szamok ;
-        std::vector<std::vector<bool>> biztosszamok;
     protected:
+        std::vector<std::vector<int>> szamok ;
     public:
         Application();
         virtual ~Application();

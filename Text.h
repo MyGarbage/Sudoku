@@ -10,6 +10,7 @@ class Text : public Widget
         std::string label;
         int sx;
         int sy;
+
     public:
         Text(int x0, int y0, std::string label_0);
         virtual ~Text();

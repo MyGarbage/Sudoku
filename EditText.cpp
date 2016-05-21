@@ -1,7 +1,6 @@
 #include "EditText.h"
 #include <string>
 #include <sstream>
-#include <string>
 using namespace genv;
 
 std::string szamtostring(int szam){

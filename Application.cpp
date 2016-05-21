@@ -14,23 +14,27 @@ extern const int XX = 600, YY = 500;
 
 
 Application::Application(){
-    beolvas();
-    biztosszamok = std::vector<std::vector<bool>> (9, std::vector<bool> (9,false));
+    this->beolvas();
 }
 Application::~Application(){}
 
 
 void Application::beolvas(){
     std::ifstream file;
-    file.open("Simple.txt");
+    file.open("simple.txt");
 
-    for(int i=0; i<9; i++){
-        for (int j=0; j<9;j++){
-            file >>szamok[i][j];
-            if (szamok[i][j] != 0) biztosszamok[i][j] = true;
+    if (file.is_open()){
+        for(int i=0; i<9; i++){
+            for (int j=0; j<9;j++){
+                file >>szamok[i][j];
+            }
         }
+        file.close();
     }
-    file.close();
+    else {
+        std::cout <<"File is not open";
+    }
+
 }
 
 
@@ -40,7 +44,7 @@ void Application::run(){
 
     genv::gout.open(XX,YY);
     srand(time(nullptr));
-    GrafikusFelulet graf;
+    GrafikusFelulet graf(szamok);
 
     event ev;
     gin.timer(100);
